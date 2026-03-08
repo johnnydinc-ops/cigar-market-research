@@ -1,0 +1,7 @@
+Catalog cleanup stats
+=====================
+Input:  3097 cigars, 8291 pricing, 3097 links, 692 documents
+Output: 2501 cigars (deduped), 9 retailers, 2708 pricing, 2994 links, 692 documents
+Deduped cigars: 596 merged
+
+Written: /Users/johnnydeutsch/cigar-market-research/website/data/catalog/catalog.json

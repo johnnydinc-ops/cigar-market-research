@@ -1,21 +1,19 @@
 import { NextRequest } from "next/server";
 import { recommend, computeBestDeals } from "@cigar/core";
 import {
-  MOCK_CIGARS,
-  MOCK_PRICING,
-  MOCK_RETAILERS,
-  MOCK_LINKS,
+  getCatalog,
   resolveSeedCigar,
   formatCigarTitle,
-} from "../../../data/mockCatalog";
+} from "../../../data/catalogLoader";
 
 export const dynamic = "force-dynamic";
 
-const retailers = new Map(MOCK_RETAILERS.map((r) => [r.id, r]));
-
 export async function GET(request: NextRequest) {
+  const catalog = await getCatalog();
+  const retailers = new Map(catalog.retailers.map((r) => [r.id, r]));
+
   const q = request.nextUrl.searchParams.get("q") ?? "";
-  const seed = resolveSeedCigar(q);
+  const seed = resolveSeedCigar(q, catalog.cigars);
   if (!seed) {
     return Response.json(
       { error: "No matching cigar found. Try a brand or line name (e.g. Padron, Oliva)." },
@@ -24,14 +22,14 @@ export async function GET(request: NextRequest) {
   }
 
   const results = await recommend(
-    { seedCigar: seed, catalog: MOCK_CIGARS },
+    { seedCigar: seed, catalog: catalog.cigars },
     { topK: 5, minScore: 0.2 }
   );
 
   const payload = await Promise.all(
     results.map(async (r) => {
-      const pricing = MOCK_PRICING.filter((p) => p.cigarId === r.cigar.id);
-      const links = MOCK_LINKS.filter((l) => l.cigarId === r.cigar.id);
+      const pricing = catalog.pricing.filter((p) => p.cigarId === r.cigar.id);
+      const links = catalog.links.filter((l) => l.cigarId === r.cigar.id);
       const deals = computeBestDeals(
         { cigarId: r.cigar.id, pricing, retailers, links },
         {}
