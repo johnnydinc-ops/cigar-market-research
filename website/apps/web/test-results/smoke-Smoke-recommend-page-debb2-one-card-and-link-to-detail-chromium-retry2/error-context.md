@@ -1,0 +1,69 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation "Main" [ref=e2]:
+    - link "Home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - link "Wishlist" [ref=e4] [cursor=pointer]:
+      - /url: /wishlist
+    - link "Profile" [ref=e5] [cursor=pointer]:
+      - /url: /profile
+    - link "Compliance" [ref=e6] [cursor=pointer]:
+      - /url: /compliance
+  - main [ref=e7]:
+    - link "← Back to search" [ref=e8] [cursor=pointer]:
+      - /url: /
+    - heading "Similar to Oliva Serie V Melanio" [level=1] [ref=e9]
+    - paragraph [ref=e10]: Recommendations from our engine. Click through for best price.
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - button "Add My Father Le Bijou 1922 Toro to wishlist" [ref=e14] [cursor=pointer]: Add to wishlist
+        - article [ref=e15]:
+          - heading "My Father Le Bijou 1922 Toro" [level=3] [ref=e16]
+          - generic [ref=e17]:
+            - generic [ref=e18]: Full
+            - generic [ref=e19]: Full
+            - generic [ref=e20]: Maduro
+          - paragraph [ref=e21]: 0 retailers
+          - link "See best deal" [active] [ref=e22] [cursor=pointer]:
+            - /url: /cigar/55555555-5555-4555-a555-555555555555
+      - generic [ref=e23]:
+        - button "Add Padrón 1964 Anniversary Series Principe to wishlist" [ref=e25] [cursor=pointer]: Add to wishlist
+        - article [ref=e26]:
+          - heading "Padrón 1964 Anniversary Series Principe" [level=3] [ref=e27]
+          - generic [ref=e28]:
+            - generic [ref=e29]: Medium-Full
+            - generic [ref=e30]: Full
+            - generic [ref=e31]: Maduro
+          - paragraph [ref=e32]: $12.99 at Famous Smoke
+          - link "See best deal" [ref=e33] [cursor=pointer]:
+            - /url: /cigar/11111111-1111-4111-a111-111111111111
+      - generic [ref=e34]:
+        - button "Add Dunbarton Tobacco & Trust Sin Compromiso No. 5 to wishlist" [ref=e36] [cursor=pointer]: Add to wishlist
+        - article [ref=e37]:
+          - heading "Dunbarton Tobacco & Trust Sin Compromiso No. 5" [level=3] [ref=e38]
+          - generic [ref=e39]:
+            - generic [ref=e40]: Medium-Full
+            - generic [ref=e41]: Full
+            - generic [ref=e42]: Maduro
+          - paragraph [ref=e43]: $15.99 at Famous Smoke
+          - link "See best deal" [ref=e44] [cursor=pointer]:
+            - /url: /cigar/33333333-3333-4333-a333-333333333333
+      - generic [ref=e45]:
+        - button "Add Arturo Fuente Hemmingway Short Story to wishlist" [ref=e47] [cursor=pointer]: Add to wishlist
+        - article [ref=e48]:
+          - heading "Arturo Fuente Hemmingway Short Story" [level=3] [ref=e49]
+          - generic [ref=e50]:
+            - generic [ref=e51]: Medium-Mild
+            - generic [ref=e52]: Medium
+            - generic [ref=e53]: Connecticut
+          - paragraph [ref=e54]: 0 retailers
+          - link "See best deal" [ref=e55] [cursor=pointer]:
+            - /url: /cigar/44444444-4444-4444-a444-444444444444
+    - complementary "Trust and transparency" [ref=e57]:
+      - paragraph [ref=e58]: We don't sell cigars; we refer you to retailers.
+      - paragraph [ref=e59]: We compare prices from 17 US retailers.
+      - paragraph [ref=e60]: Prices updated daily.
+  - alert [ref=e61]
+```

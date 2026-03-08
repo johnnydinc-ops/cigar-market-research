@@ -1,0 +1,30 @@
+{
+  "name": "@cigar/ingestion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "run-neptune": "node dist/run-neptune.js",
+    "run-all-scrapers": "node dist/run-all-scrapers.js"
+  },
+  "dependencies": {
+    "@cigar/core": "*",
+    "cheerio": "^1.0.0",
+    "playwright": "^1.58.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

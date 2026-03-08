@@ -1,0 +1,24 @@
+{
+  "name": "cigar-market-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Research + product: US-only cigar recommendation and deal-finding",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev": "npm run dev -w @cigar/web",
+    "dev:api": "npm run dev -w @cigar/api",
+    "dev:report": "npm run dev -w cigar-market-research-report",
+    "e2e": "npm run e2e -w @cigar/web"
+  },
+  "keywords": ["cigar", "recommendation", "deal-finding", "US"],
+  "author": "",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "research/report",
+    "website/apps/*",
+    "website/packages/*"
+  ]
+}

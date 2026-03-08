@@ -1,0 +1,462 @@
+/**
+ * Design system: "Humidor" — dark, warm, editorial.
+ * Distinctive typography, amber accent, premium cigar feel.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Surfaces */
+  --bg: #0f0e0c;
+  --bg-elevated: #1a1816;
+  --bg-card: #252220;
+  --bg-input: #1a1816;
+  /* Text */
+  --text: #f5f3ef;
+  --text-muted: #9c958b;
+  --text-subtle: #6b655d;
+  /* Accent: amber / brass */
+  --accent: #c9a227;
+  --accent-hover: #ddb63a;
+  --accent-muted: #8b7322;
+  --accent-dim: rgba(201, 162, 39, 0.15);
+  /* Borders */
+  --border: #2e2b28;
+  --border-focus: var(--accent);
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  /* Focus & radius */
+  --focus-ring: 2px solid var(--accent);
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-lg: 12px;
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  /* Type scale */
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.35rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2.25rem;
+  --line-height-tight: 1.3;
+  --line-height-body: 1.6;
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 0 1px var(--border), 0 0 24px var(--accent-dim);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--line-height-body);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- SearchEntry --- */
+.cigar-search-entry {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 36rem;
+  width: 100%;
+}
+.cigar-search-entry__input {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-input);
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cigar-search-entry__input::placeholder {
+  color: var(--text-subtle);
+}
+.cigar-search-entry__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+.cigar-search-entry__btn {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  padding: var(--space-4) var(--space-8);
+  background: var(--accent);
+  color: #0f0e0c;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+.cigar-search-entry__btn:hover {
+  background: var(--accent-hover);
+}
+.cigar-search-entry__btn:active {
+  transform: scale(0.98);
+}
+.cigar-search-entry__btn:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+.cigar-search-entry__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- RecommendationCard --- */
+.cigar-recommendation-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  max-width: 22rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cigar-recommendation-card:hover {
+  border-color: var(--accent-muted);
+  box-shadow: var(--shadow-card);
+}
+.cigar-recommendation-card__img {
+  display: block;
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--bg-elevated);
+}
+.cigar-recommendation-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.cigar-recommendation-card__explanation {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin: 0 0 var(--space-4);
+  line-height: var(--line-height-body);
+}
+.cigar-recommendation-card__provenance {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+.cigar-recommendation-card__provenance summary {
+  cursor: pointer;
+  list-style: none;
+}
+.cigar-recommendation-card__provenance summary::-webkit-details-marker {
+  display: none;
+}
+.cigar-recommendation-card__attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.cigar-recommendation-card__pill {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  padding: var(--space-1) var(--space-2);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+}
+.cigar-recommendation-card__price {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+.cigar-recommendation-card__cta {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+  background: var(--accent);
+  color: #0f0e0c;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.cigar-recommendation-card__cta:hover {
+  background: var(--accent-hover);
+}
+.cigar-recommendation-card__cta:active {
+  transform: scale(0.98);
+}
+.cigar-recommendation-card__cta:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- DealComparisonTable --- */
+.cigar-deal-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+}
+.cigar-deal-table-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-6);
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.cigar-deal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+}
+.cigar-deal-table th,
+.cigar-deal-table td {
+  padding: var(--space-4) var(--space-6);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.cigar-deal-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.cigar-deal-table th {
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cigar-deal-table tbody tr {
+  transition: background 0.15s;
+}
+.cigar-deal-table tbody tr:hover td {
+  background: var(--bg-elevated);
+}
+.cigar-deal-table__sort {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-4) var(--space-6);
+  margin: calc(-1 * var(--space-4)) calc(-1 * var(--space-6));
+  border-radius: var(--radius-sm);
+  transition: color 0.2s;
+}
+.cigar-deal-table__sort:hover {
+  color: var(--accent);
+}
+.cigar-deal-table__sort:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: -2px;
+}
+.cigar-deal-table__cta {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: #0f0e0c;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: background 0.2s;
+}
+.cigar-deal-table__cta:hover {
+  background: var(--accent-hover);
+}
+.cigar-deal-table__cta:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- TrustBlock --- */
+.cigar-trust-block {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  padding: var(--space-6);
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.cigar-trust-block p {
+  margin: 0 0 var(--space-2);
+}
+.cigar-trust-block p:last-child {
+  margin-bottom: 0;
+}
+.cigar-trust-block a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.cigar-trust-block a:hover {
+  text-decoration: underline;
+}
+.cigar-trust-block a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- Page-level utilities --- */
+.cigar-page {
+  padding: var(--space-8) var(--space-6);
+  max-width: 72rem;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+.cigar-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, var(--font-size-3xl));
+  font-weight: 600;
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.cigar-hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-muted);
+  margin: 0 0 var(--space-8);
+  max-width: 42ch;
+}
+.cigar-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--accent);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+  transition: color 0.2s;
+}
+.cigar-back-link:hover {
+  color: var(--accent-hover);
+}
+.cigar-section-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-2);
+  color: var(--text);
+}
+.cigar-section-subtitle {
+  color: var(--text-muted);
+  font-size: var(--font-size-base);
+  margin: 0 0 var(--space-6);
+}
+.cigar-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  gap: var(--space-6);
+}
+.cigar-form-input {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text);
+}
+.cigar-form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dim);
+}
+.cigar-btn-primary {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+  background: var(--accent);
+  color: #0f0e0c;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: background 0.2s;
+}
+.cigar-btn-primary:hover {
+  background: var(--accent-hover);
+}
+.cigar-btn-ghost {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  transition: border-color 0.2s, color 0.2s;
+}
+.cigar-btn-ghost:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+/* --- App nav (used by web app) --- */
+.app-nav-link:hover {
+  color: var(--text) !important;
+  background: var(--bg-card);
+}
+
+/* Utility: screen-reader only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

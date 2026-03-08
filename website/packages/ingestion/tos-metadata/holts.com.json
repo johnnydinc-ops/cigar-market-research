@@ -1,0 +1,11 @@
+{
+  "sourceId": "holts.com",
+  "sourceName": "Holt's",
+  "tosUrl": "https://www.holts.com/terms",
+  "robotsUrl": "https://www.holts.com/robots.txt",
+  "lastReviewedAt": "2025-03-07T00:00:00Z",
+  "allowedUse": "with-rate-limit",
+  "maxRequestsPerMinute": 8,
+  "killSwitch": false,
+  "notes": "Scraping approved. Rate-limited to 8 req/min. Research: Tier 2 retailer."
+}

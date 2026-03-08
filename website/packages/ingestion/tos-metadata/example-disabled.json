@@ -1,0 +1,10 @@
+{
+  "sourceId": "example-disabled",
+  "sourceName": "Example (scraping disabled)",
+  "tosUrl": "https://example.com/terms",
+  "robotsUrl": "https://example.com/robots.txt",
+  "lastReviewedAt": "2025-01-01T00:00:00Z",
+  "allowedUse": "none",
+  "killSwitch": true,
+  "notes": "Example placeholder. Do not enable scraping without legal review and explicit ToS allowance."
+}

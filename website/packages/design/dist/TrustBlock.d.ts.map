@@ -1,0 +1,1 @@
+{"version":3,"file":"TrustBlock.d.ts","sourceRoot":"","sources":["../src/TrustBlock.tsx"],"names":[],"mappings":"AAAA,MAAM,WAAW,eAAe;IAC9B,aAAa,CAAC,EAAE,MAAM,CAAC;IACvB,UAAU,EAAE,MAAM,CAAC;IACnB,eAAe,CAAC,EAAE,MAAM,CAAC;IACzB,gBAAgB,CAAC,EAAE,MAAM,CAAC;CAC3B;AAED,wBAAgB,UAAU,CAAC,EACzB,aAAa,EACb,UAAU,EACV,eAAe,EACf,gBAAgB,GACjB,EAAE,eAAe,2CAejB"}

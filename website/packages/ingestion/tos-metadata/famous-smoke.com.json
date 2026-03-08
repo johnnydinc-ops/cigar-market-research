@@ -1,0 +1,11 @@
+{
+  "sourceId": "famous-smoke.com",
+  "sourceName": "Famous Smoke Shop",
+  "tosUrl": "https://www.famous-smoke.com/terms",
+  "robotsUrl": "https://www.famous-smoke.com/robots.txt",
+  "lastReviewedAt": "2025-03-07T00:00:00Z",
+  "allowedUse": "with-rate-limit",
+  "maxRequestsPerMinute": 8,
+  "killSwitch": false,
+  "notes": "Scraping approved. Rate-limited to 8 req/min. Research: Tier 1 retailer."
+}

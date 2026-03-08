@@ -1,0 +1,11 @@
+{
+  "sourceId": "mikescigars.com",
+  "sourceName": "Mike's Cigars",
+  "tosUrl": "https://www.mikescigars.com/terms",
+  "robotsUrl": "https://www.mikescigars.com/robots.txt",
+  "lastReviewedAt": "2025-03-07T00:00:00Z",
+  "allowedUse": "with-rate-limit",
+  "maxRequestsPerMinute": 8,
+  "killSwitch": false,
+  "notes": "Scraping approved. Rate-limited to 8 req/min. Research: Tier 2 retailer."
+}

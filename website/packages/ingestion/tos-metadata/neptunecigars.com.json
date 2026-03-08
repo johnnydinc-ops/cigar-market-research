@@ -1,0 +1,11 @@
+{
+  "sourceId": "neptunecigars.com",
+  "sourceName": "Neptune Cigars",
+  "tosUrl": "https://www.neptunecigar.com/terms-and-conditions",
+  "robotsUrl": "https://www.neptunecigar.com/robots.txt",
+  "lastReviewedAt": "2025-03-07T00:00:00Z",
+  "allowedUse": "with-rate-limit",
+  "maxRequestsPerMinute": 8,
+  "killSwitch": false,
+  "notes": "Scraping allowed per product owner. Rate-limited to 8 requests/min. Prefer affiliate/API feeds if Neptune offers them later."
+}

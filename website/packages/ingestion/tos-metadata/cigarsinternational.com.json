@@ -1,0 +1,11 @@
+{
+  "sourceId": "cigarsinternational.com",
+  "sourceName": "Cigars International",
+  "tosUrl": "https://www.cigarsinternational.com/terms",
+  "robotsUrl": "https://www.cigarsinternational.com/robots.txt",
+  "lastReviewedAt": "2025-03-07T00:00:00Z",
+  "allowedUse": "with-rate-limit",
+  "maxRequestsPerMinute": 8,
+  "killSwitch": false,
+  "notes": "Scraping approved. Rate-limited. State restrictions for affiliates apply when linking. Research: Tier 1 retailer."
+}

@@ -5,6 +5,12 @@ node_modules/
 report/.next/
 report/out/
 
+# Monorepo
+apps/*/dist/
+apps/*/.next/
+apps/*/out/
+packages/*/dist/
+
 # Build
 .next/
 out/
