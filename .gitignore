@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Next.js (report app)
+report/.next/
+report/out/
+
+# Build
+.next/
+out/
+
+# Env
+.env
+.env.local
+*.log
+
+# OS
+.DS_Store
